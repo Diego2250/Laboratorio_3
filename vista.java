@@ -8,7 +8,7 @@ Vista. Responsable de toda interaccion con el usuario.
 import java.util.Scanner;
 public class vista{
 	private Scanner scan;
-
+    /*Costructor de clase*/
 	public vista(){
 		scan = new Scanner(System.in);
 	}
@@ -53,8 +53,8 @@ public class vista{
 	return resultado;
 	}
 
-     /*Metodo para pedir datos del post
-	@return Datos del post
+     /*Metodo para pedir hashtags
+	@return hashtags
 	*/
 	public String[] pedirhashtags(){
         String[] resultado={"","","",""};
@@ -107,8 +107,8 @@ public class vista{
 	return resultado;
 	}
 
-     /*Metodo para pedir datos del post
-	@return Datos del post
+     /*Metodo para pedir tipo de post
+	@return tipo de post
 	*/
 	public int pedirtipopost(){
 		int tipo=0;
@@ -160,8 +160,8 @@ public class vista{
 	return resultado;
 	}
 
-            /*Metodo para pedir el texto
-	@return texto
+            /*Metodo para pedir el url
+	@return url
 	*/
 	public String pedirurl(){
 		String resultado="";
@@ -175,8 +175,8 @@ public class vista{
 	return resultado;
 	}
 
-            /*Metodo para pedir el texto
-	@return texto
+            /*Metodo para pedir datos de video
+	@return datos de video
 	*/
 	public int[] pedirDatosVideo(){
 		int[] resultado={0, 0};
@@ -209,8 +209,8 @@ public class vista{
 	return resultado;
 	}
 
-    /*Metodo para pedir el datos de la imagen
-	@return datos de imagen
+    /*Metodo para pedir el datos de laudio
+	@return datos de audio
 	*/
 	public int[] pedirDatosaudio(){
 		int[] resultado={0, 0, 0};
@@ -228,29 +228,14 @@ public class vista{
 	return resultado;
 	}
 
-    /*Metodo para pedir el texto
-	@return texto
+   /*Metodo para pedir el datos de laudio
+	@return datos de audio
 	*/
 	public String pedirDatosVideoString(){
 		String resultado="";
 		try{
 		System.out.println("Por favor ingrese formato del archivo multimedia: ");
 		resultado = scan.next();
-	}
-	catch (Exception e){
-		e.printStackTrace();
-	}
-	return resultado;
-	}
-
-               /*Metodo para pedir el texto
-	@return texto
-	*/
-	public String[] pedircomentario(){
-		String[] resultado={""};
-		try{
-		System.out.println("Por favor ingrese su comentario: ");
-		resultado[0] = scan.next();
 	}
 	catch (Exception e){
 		e.printStackTrace();
@@ -283,7 +268,7 @@ public class vista{
         } 
 	}
 
-     /*Metodo para mostrar post de emoji
+     /*Metodo para mostrar post de texto
 	*/
 	public void MostrarPost(posttexto p){
         int likes=p.getLikes(); 
@@ -308,7 +293,7 @@ public class vista{
         } 
 	}
 
-	 /*Metodo para mostrar post de emoji
+	 /*Metodo para mostrar post de video
 	*/
 	public void MostrarPost(postvideo p){
         int likes=p.getLikes(); 
@@ -336,7 +321,7 @@ public class vista{
         }
 	}
 
-    	 /*Metodo para mostrar post de emoji
+    	 /*Metodo para mostrar post de audio
 	*/
 	public void MostrarPost(postaudio p){
         int likes=p.getLikes(); 
@@ -365,7 +350,7 @@ public class vista{
         }
 	}
 
-        	 /*Metodo para mostrar post de emoji
+        	 /*Metodo para mostrar post de imagen
 	*/
 	public void MostrarPost(postimagen p){
         int likes=p.getLikes(); 
@@ -394,7 +379,8 @@ public class vista{
         }
 	}
 
-    /*Metodo para mostrar mensaje
+    /*Metodo para pedir el comentario
+	@return comentario
 	*/
 	public String pedirComentario(){
 		System.out.println("Ingrese el comentario que desea añadir al post");
@@ -403,7 +389,8 @@ public class vista{
         return comentario; 
 	}
 
-    /*Metodo para mostrar mensaje
+    /*Metodo para pedir el numero de post
+	@return numero de post
 	*/
 	public int pedirNumeroPost(){
         int n=0; 

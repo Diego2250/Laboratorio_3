@@ -1,7 +1,7 @@
 /***************************************************
 Controlador.java
 Autor: Diego Morales
-Fecha: 28/09/2021
+Fecha: 02/11/2021
 
 Driver program. Instancia la vista y el modelo,
 y los comunica de acuerdo con las elecciones del
