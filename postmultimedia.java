@@ -7,12 +7,10 @@ Modelo de jugador para uso del Controlador.
 ******************************************************************/
 public class postmultimedia extends post{
     protected String url; 
-    protected int resolucion; 
     protected int tamano; 
-    public postmultimedia(String u, int r, int t){
+    public postmultimedia(String f, String a, String ho, String[] c, String[] h, String u, int t){
         super(f, a, ho, c, h);
         url=u; 
-        resolucion=r; 
         tamano=t; 
     }
 
@@ -20,11 +18,7 @@ public class postmultimedia extends post{
         return url; 
     }
 
-    public String getResolucion(){
-        return resolucion; 
-    }
-
-    public String getTamano(){
+    public int getTamano(){
         return tamano; 
     }
 }

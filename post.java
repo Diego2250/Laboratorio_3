@@ -3,7 +3,7 @@ post.java
 Autor: Diego Morales
 Última modificación: 28/09/2021
 
-Modelo de enemigo para uso del Controlador.
+Modelo de post para uso del Controlador.
 ******************************************************************/
 public class post{
     protected int likes=0; 
@@ -45,15 +45,19 @@ public class post{
         return hashtags; 
     }
 
-    public void darLike(post p){
+    public void darLike(){
         likes=likes+1; 
     }
 
-    public void comentar(post p, String comentario){
-        for (int i=0; i<10; i++){
-            if(comentarios[i]!=""){
+    public void comentar(String comentario){
+        for (int i=0; i<comentarios.length; i++){
+            if(comentarios[i]==""){
                 comentarios[i]=comentario; 
                 vista.ComentarioAnadido();
+                System.out.println(comentarios[i]);
+                break;
+            }else{
+                System.out.println("que pedo");
             }
         }
     }

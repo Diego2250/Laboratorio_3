@@ -7,7 +7,7 @@ Modelo de jugador para uso del Controlador.
 ******************************************************************/
 public class postemoji extends post{
     private String emoji; 
-    public postemoji(String e){
+    public postemoji(String f, String a, String ho, String[] c, String[] h, String e){
         super(f, a, ho, c, h);
         emoji=e; 
     }
@@ -17,6 +17,6 @@ public class postemoji extends post{
     }
 
     public void mostrar(postemoji p){
-        vista.MostrarPostEmoji(p);
+        vista.MostrarPost(p);
     }
 }

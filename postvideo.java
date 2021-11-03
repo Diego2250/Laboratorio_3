@@ -7,9 +7,9 @@ Modelo de jugador para uso del Controlador.
 ******************************************************************/
 public class postvideo extends postmultimedia{
     private int framerate;
-    public postvideo(int f){
-        super(u, r, t); 
-        framerate=f; 
+    public postvideo(String f, String a, String ho, String[] c, String[] h, String u, int t, int fr){
+        super(f, a, ho, c, h, u, t); 
+        framerate=fr; 
     }
 
     public int getFramerate(){
@@ -17,6 +17,6 @@ public class postvideo extends postmultimedia{
     }
 
     public void reproducir(postvideo p){
-        vista.ReproducirVideo(p);
+        vista.MostrarPost(p);
     }
 }
